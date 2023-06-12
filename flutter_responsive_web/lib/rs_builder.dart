@@ -9,7 +9,9 @@ class ResponsiveBuilder extends StatelessWidget {
   static const double _tabletSize = 768;
   static const double _desktopSize = 1200;
 
+  static bool isPhone(double width) => width < _tabletSize;
   static bool isTablet(double width) => width >= _tabletSize && width < _desktopSize;
+  static bool isDesktop(double width) => width >= _desktopSize;
 
   const ResponsiveBuilder({
     Key? key,
